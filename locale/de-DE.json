@@ -1,959 +1,607 @@
 {
   "i18n": {
-    "note": "Все переводы предоставлены нашим сообществом. Мы не можем гарантировать их правильность и качество.\nЕсли вы знаете один из языков, представленных в нашем репозитории на Github ({url}), мы будем рады получить ваш вклад в проект Akemi!"
+    "note": "Alle Übersetzungen werden von unserer Community zur Verfügung gestellt. Wir können die Richtigkeit und Qualität der Übersetzungen nicht garantieren.."
   },
   "common": {
-    "moderator": "Модератор",
-    "member": "Участник",
-    "author": "Автор",
-    "reason": "Причина",
-    "channel": "Канал",
-    "duration": "Длительность",
-    "requester": "Запрос от {user}",
-    "target_not_found": "участник не найден."
+    "moderator": "Moderator",
+    "author": "Verfasser",
+    "reason": "Grund",
+    "channel": "Kanal",
+    "duration": "Dauer",
+    "requester": "Anfrage von {user}"
   },
   "commands": {
     "configuration": {
       "help": {
-        "description": "Посмотреть текущую конфигурацию сервера."
+        "description": "die aktuellen Serverkonfiguration anschauen."
       },
-      "data_not_found": "Вашего сервера нет в базе данных.",
-      "server_config": "Конфигурация сервера {guildName}",
-      "select_options": "Выберите опцию в выпадающем списке для просмотра конфигурации сервера.",
+      "data_not_found": "Ihr Server befindet sich nicht in der Datenbank.",
+      "server_config": "Server-Konfiguration {guildName}",
+      "select_options": "Wählen Sie eine Option aus der Dropdown-Liste aus, um die Serverkonfiguration anzuzeigen..",
       "general": {
-        "title": "{emote_general} Основные",
-        "language": "Язык: `{language}`",
-        "embed_color": "Цвет встраивания: `{hex}`",
-        "currency": "Иконка серверной валюты: {currency}",
-        "prefix": "Префикс сервера: `{prefix}`",
+        "title": "{emote_general} Hauptsächlich",
+        "language": "Sprache: `{language}`",
+        "embed_color": "Farbe einbetten: `{hex}`",
+        "currency": "Symbol für die Serverwährung: {currency}",
+        "prefix": "Server-prefix: `{prefix}`",
         "premium": "AkemiPRO: {boolean}",
-        "mod_roles": "Роли модераторов",
-        "auto_roles": "Автоматически назначаемые роли"
+        "mod_roles": "Moderator Rollen",
+        "auto_roles": "Automatisch zugewiesene Rollen"
       },
       "automod": {
-        "title": "{emote_automod} Автоматическая модерация",
-        "additional_filters": "Дополнительные фильтры",
+        "title": "{emote_automod} Automatische Moderation",
+        "additional_filters": "Zusätzliche Filter",
         "strike_count": "{count, plural, one {# страйк} few {# страйка} many {# страйков} other {# страйков}}",
-        "max_newlines": "Максимальное количество новых строк: {count}",
-        "max_mentions_count": "Максимальное количество упоминаний ролей/участников: {count}",
-        "dupe_limit": "Предел: {count, plural, one {# сообщение} few {# сообщения} many {# сообщений} other {# сообщений}}",
-        "dupe_strike_trash": "Выдавать страйки после после достижения предела: {count, plural, one {# сообщение} few {# сообщения} many {# сообщений} other {# сообщений}}",
-        "emoji_limit_per_message": "Предел эмодзи для 1 сообщения: {count}",
-        "rate_limit_join": "Предел: {count, plural, one {# присоединение} few {# присоединения} many {# присоединений} other {# присоединений}}",
-        "join_time": "Время: {time}"
+        "max_newlines": "Maximale Anzahl neuer Zeilen: {count}",
+        "max_mentions_count": "Maximale Anzahl von Erwähnungen von Rollen/Mitgliedern: {count}",
+        "dupe_limit": "Grenze: {count, plural, one {# сообщение} few {# сообщения} many {# сообщений} other {# сообщений}}",
+        "dupe_strike_trash": "Strike geben nach Erreichen des Limits: {count, plural, one {# сообщение} few {# сообщения} many {# сообщений} other {# сообщений}}",
+        "emoji_limit_per_message": "Emoji-Limit für 1 Nachricht: {count}",
+        "rate_limit_join": "Grenze: {count, plural, one {# присоединение} few {# присоединения} many {# присоединений} other {# присоединений}}",
+        "join_time": "Zeit: {time}"
       },
       "logs": {
-        "title": "{emote_logs} Журнал действий"
+        "title": "{emote_logs} Aktivitätsprotokoll"
       }
     },
     "mutes": {
       "help": {
-        "description": "Посмотреть список наказанных участников."
+        "description": "Liste der bestraften Teilnehmer anzeigen."
       },
-      "process": "{emote_loading} Получение информации...",
-      "no_member_in_timeouts": "В настоящее время нет наказанных участников.",
-      "member_timeouts": "Наказанные участники",
-      "expires": "{emote_timeout} Истекает: {time}"
-    },
-    "reset": {
-      "help": {
-        "description": "Обнулить прогресс участников"
-      },
-      "select_menu_option": "Выберите опцию из выпадающего списка.",
-      "warning": "{emote_warn} Это действие необратимо, для сброса прогресса нажмите соответствующую кнопку."
+      "process": "{emote_loading} Einholung von Informationen...",
+      "no_member_in_timeouts": "Es gibt derzeit keine bestraften Teilnehmer.",
+      "member_timeouts": "Bestrafte Teilnehmer",
+      "expires": "{emote_timeout} Endet: {time}"
     },
     "say": {
       "help": {
-        "description": "Отправить сообщение от имени бота.",
+        "description": "Eine Nachricht im Namen des Bots senden.",
         "examples": [
           {
-            "description": "Отправить сообщение в канал #general."
+            "description": "Sende eine Nachricht in #general."
           },
           {
-            "description": "Отправить сообщение в текущий чат."
+            "description": "Sende eine Nachricht an den aktuellen Chat."
           }
         ]
       },
-      "no_content": "укажите текст для отправки сообщения.",
-      "failed_to_parse": "не удалось распознать текст сообщения."
+      "no_content": "schreiben sie einen Text, denn ich schicken soll."
     },
-    "settings": {
-      "help": {
-        "description": "Настройка модулей бота"
-      },
-      "title": "Настройки сервера",
-      "description": "Взаимодействуйте с выпадающим меню выбора, чтобы настроить сервер.",
-      "auto-role": {
-        "failed_to_get_roles": "{emote_error} Не удалось получить список ролей. Вероятно, у бота нет прав или нарушена иерархия ролей.",
-        "title": "Автоматические роли",
-        "description": {
-          "line_1": "Роли в выпадающем списке **выделены**, если они уже используются для назначения участникам сервера.\n",
-          "line_2": "Используйте кнопки для управления страницами меню.",
-          "line_3": "Всего назначается **{count, plural, one {# роль} few {# роли} many {# ролей} other {# ролей}}**."
-        },
-        "pro": {
-          "title": "{emote_boost} Хотите назначать больше ролей?",
-          "description": "С подпиской AkemiPRO вы можете назначить до 25 ролей."
-        },
-        "successfully_updated": "{emote_success} Список автоматических ролей успешно обновлен."
-      },
-      "automod": {
-        "title": "Автоматическая модерация",
-        "description": "Выберите фильтр для настройки."
-      },
-      "casino": {
-        "title": "Казино",
-        "description": "При использовании команды слотов максимальная ставка составляет **150**, но вы можете изменить ее на более высокую.",
-        "specify_rate": "Укажите новую ставку.",
-        "specify_real_number": "Укажите действительное число.",
-        "rate_range": "Укажите максимальное значение ставки в диапазоне от **150** до **100,000**",
-        "rate_changed": "{emote_success} Ставка `{rate}` успешно сохранена."
-      },
-      "color": {
-        "title": "Цвет встраивания",
-        "description": "Когда вы используете команды, бот отображает вставки, которые по умолчанию имеют невидимый цвет.\n\nВы можете установить свой цвет в соответствии с тематикой вашего сообщества.",
-        "specify_hex": "Укажите новый цвет в `hex` формате. Пример: `#976767`",
-        "invalid_hex": "Не удалось получить информацию об этом цвете. Пожалуйста, попробуйте еще раз.",
-        "hex_equal_current": "Вы указали тот же цвет, что и уже установленный. Пожалуйста, попробуйте еще раз.",
-        "hex_changed": "{emote_success} Цвет `#{hex}` успешно изменен.",
-        "hex_default_changed": "{emote_success} Цвет встраивания по умолчанию успешно изменен."
-      },
-      "currency": {
-        "title": "Серверная валюта",
-        "description": "Позволяет изменить иконку валюты сервера, которая отображается в командах из категории \"экономика\".",
-        "error": {
-          "title": "{emote_warn} Обнаружена ошибка",
-          "description": "Akemi не смогла найти используемый в данный момент эмодзи. Мы рекомендуем изменить его, чтобы избежать некорректного отображения."
-        },
-        "specify_currency": "Укажите новый эмодзи, который будет использоваться в качестве индикатора в командах экономики.",
-        "emoji_not_found": "Я не смогла найти такой эмодзи.",
-        "currency_changed": "Валюта сервера успешно изменена."
-      },
-      "goodbye": {},
-      "logs": {
-        "failed_to_get_channels": "Не удалось получить список доступных каналов. Возможно, у бота отсутствуют права.",
-        "title": "Журнал действий",
-        "description": {
-          "line_1": "Это различные типы событий, которые срабатывают при удалении сообщений, использовании команд и действиях по модерации, позволяя модераторам и администраторам получить более подробную информацию о происходящих действиях.\n\n",
-          "line_2": "Зеленый индикатор (<:online:815270641078108160>) в списке сообщает вам, что это действие уже активно, и отправляет полезную информацию в канал.\n\n",
-          "line_3": "Используйте кнопки для управления страницами в списках."
-        },
-        "updated": "{emote_success} Настройки были успешно обновлены."
-      },
-      "music": {
-        "title": "Музыка",
-        "description": {
-          "line_1": "Сейчас максимальная длина очереди: {maxQueue}\n",
-          "line_2": "Роли Dj: {djRoles}"
-        },
-        "pro": {
-          "title": "{emote_boost} Хотите установить больше Dj ролей?",
-          "description": "С подпиской AkemiPRO вы можете установить до 5 ролей."
-        },
-        "max_queue_changed": "{emote_success} Максимальная длина очереди успешно изменена."
-      },
-      "notification": {},
-      "prefix": {
-        "title": "Префикс",
-        "description": "Установка префикса, на который бот будет реагировать при вызове команды.",
-        "prefix_changed": "{emote_success} Префикс успешно изменен."
-      },
-      "private": {
-        "title": "Приватные голосовые комнаты",
-        "description": "Это временные комнаты, которые создаются при входе в триггерный канал и удаляются, если в них нет участников.",
-        "perms_required": "{emote_error} Для начала выдайте мне соответствующие права (`Управлять каналами`).",
-        "room": "Приватные каналы",
-        "data": {
-          "name": {
-            "one": "Создать канал [+]",
-            "two": "Управление комнатами Akemi"
-          },
-          "reason": {
-            "one": "[Приватные комнаты] Создание категории приватных каналов",
-            "two": "[Приватные комнаты] Установка стандартного лимита для триггер канала",
-            "three": "[Приватные комнаты] Включение сервиса приватных комнат Администратором {user}"
-          }
-        },
-        "limit_changed": "{emote_success} Лимит успешно изменен."
-      },
-      "saver": {
-        "title": "Восстановление данных пользователя",
-        "description": "Эта служба отвечает за восстановление пользовательских данных - ролей и псевдонимов, если таковые имеются.",
-        "strict_roles": {
-          "title": "Строгие роли {emote_new}",
-          "description": "Установите роли, которые не должны восстанавливаться при возвращении пользователя на сервер."
-        },
-        "pro": {
-          "title": "{emote_boost} Хотите установить больше строгих ролей?",
-          "description": "С подпиской AkemiPRO вы можете установить до 30 ролей."
-        }
-      },
-      "welcome": {}
-    },
-    "relation": {
-      "help": {}
-    },
+    "settings": {},
     "skynet": {
       "help": {
-        "description": "Сочинить историю при помощи нейросети."
+        "description": "Verfassung einer Story mit einem neuronalen Netzwerk."
       },
-      "content_not_found": "как я могу сочинить историю без твоего крутого текста?",
-      "to_many_symbols": "слишком много символов...",
-      "process": "{emote_loading} Сочиняю историю...",
-      "failed_to_request": "Нейросеть не отвечает, повторите попытку еще раз.",
-      "porfirevich": "Порфирьевич",
-      "by_porfirevich": "Написано с помощью нейронной сети: {link}"
+      "content_not_found": "Wie kann ich eine Geschichte ohne deinen coolen Text erfinden??",
+      "to_many_symbols": "zu viele Zeichen...",
+      "process": "{emote_loading} Ich komponiere eine Geschichte...",
+      "failed_to_request": "Das neuronale Netzwerk reagiert nicht, versuchen Sie es erneut.",
+      "porfirevich": "Porfirewitsch",
+      "by_porfirevich": "Geschrieben mit einem neuronalen Netzwerk: {link}"
     },
     "avatar": {
       "help": {
-        "description": "Посмотреть аватар участника.",
+        "description": "Anzeigen des Avatars eines Mitglieds.",
         "examples": [
           {
-            "description": "Отобразит аватар участника, который запросил команду."
+            "description": "Zeigt den Avatar des Mitglieds an, das den Befehl angefordert hat."
           },
           {
-            "description": "Отобразит аватар участника Monix."
+            "description": "Zeigt das Avatar von Monix."
           }
         ]
       },
-      "server_avatar": "{emote_slash} Встраивание также отображает основной аватар участника, поскольку изменены параметры профиля сервера."
+      "server_avatar": "{emote_slash} Die Einbettung zeigt auch den primären Avatar des Mitglieds an, da sich die Serverprofileinstellungen geändert haben."
     },
     "bonus": {},
     "help": {
       "help": {
-        "description": "Посмотреть список доступных команд.",
+        "description": "Liste der verfügbaren Befehle anzeigen.",
         "examples": [
           {
-            "description": "Отобразит список доступных команд."
+            "description": "Zeigt eine Liste der verfügbaren Befehle an."
           },
           {
-            "description": "Отобразит информацию о команде ban."
+            "description": "Zeigt Informationen zum Befehl "Ban" an."
           }
         ]
       },
-      "information": "Информация",
-      "command_not_found": "не удалось найти такую команду.",
-      "command_info": "Информация о команде {commandName}",
-      "full_description": "Полное описание",
-      "aliases": "Псевдонимы `{aliases}`",
-      "rate_limit_time": "Время перезарядки: `{time}`",
-      "usage": "Использование: `{usage}`",
+      "information": "Information",
+      "command_not_found": "Konnte einen solchen Befehl nicht finden.",
+      "command_info": "Information über das Kommand {commandName}",
+      "full_description": "Vollständige Beschreibung",
+      "aliases": "Decknamen `{aliases}`",
+      "rate_limit_time": "Ladezeit: `{time}`",
+      "usage": "Gebrauchen: `{usage}`",
       "permissions": {
-        "bot": "Права бота",
-        "user": "Права участника"
+        "bot": "Bot-Rechte",
+        "user": "Rechte der Teilnehmer"
       },
-      "example": "Пример: №{n}",
+      "example": "Beispiel: №{n}",
       "moderate": {
-        "title": "{emote_warn} Команда из раздела модерации",
-        "description": "Это команда модерации, доступная участникам сервера при определенных условиях."
+        "title": "{emote_warn} Befehl aus dem Moderationsabschnitt",
+        "description": "Dies ist ein Moderationsbefehl, der Servermitgliedern unter bestimmten Bedingungen zur Verfügung steht."
       },
       "premium": {
-        "title": "{emote_boost} Команда для премиум серверов",
-        "description": "Чтобы использовать эту команду, на сервере должен быть активный пакет Akemi PRO."
+        "title": "{emote_boost} Befehl für Premium-Server",
+        "description": "Um diesen Befehl verwenden zu können, muss ein aktives Akemi PRO-Paket auf dem Server vorhanden sein.."
       },
-      "command_available_list": "Список доступных команд",
+      "command_available_list": "Liste der verfügbaren Befehle",
       "categories": [
-        "Административные",
-        "Основные",
-        "Модерация",
-        "Настройка",
-        "Экономика",
-        "Развлечения",
-        "Музыка",
-        "Взаимодействия",
-        "Утилиты"
+        "Administrativ",
+        "Hauptsächlich",
+        "Moderation",
+        "Einstellungen",
+        "Wirtschaftswissenschaft",
+        "Unterhaltung",
+        "Musik",
+        "Wechselwirkung",
+        "Versorgungswirtschaft"
       ]
     },
     "invite": {
       "help": {
-        "description": "Получить ссылку-приглашение Akemi."
+        "description": "Einladungslink abrufen für Akemi."
       },
-      "description": "Akemi — это многофункциональный бот, предназначенный для улучшения и защиты вашего сервера Discord.\n\nНе стесняйтесь задавать вопросы на нашем официальном сервере. Мы всегда готовы найти решение вашей проблемы!",
-      "monitoring": "{emote_partner} Мониторинги",
-      "developer": "{emote_dev} Разработчики"
+      "description": "Akemi — Es ist ein multifunktionaler Bot, der entwickelt wurde, um Ihren Server zu verbessern und zu schützen Discord.\n\nZögern Sie nicht, Fragen auf unserem offiziellen Server zu stellen. Wir sind immer bereit, eine Lösung für Ihr Problem zu finden!",
+      "monitoring": "{emote_partner} Überwachung",
+      "developer": "{emote_dev} Entwickler"
     },
     "invites": {
       "help": {
-        "description": "Посмотреть статистику отслеживаемых приглашений.",
+        "description": "Anzeigen von Statistiken für nachverfolgte Einladungen.",
         "examples": [
           {
-            "description": "Отобразит статистику приглашений участника Monix."
+            "description": "Zeigt die Einladungen Statistik von Monix."
           }
         ]
       },
-      "not_found": "не удалось получить статистику приглашений.",
-      "invites_by": "Приглашения {user}",
-      "invites_total": "Имеет {invites, plural, one {# уникальное приглашение} few {# уникальных приглашения} many {# уникальных приглашений} other {# уникальных приглашений}}",
-      "statistic": "Статистика",
+      "not_found": "Einladungsstatistiken konnten nicht abgerufen werden.",
+      "invites_by": "Einladungen {user}",
+      "invites_total": "Hat {invites, plural, one {# уникальное приглашение} few {# уникальных приглашения} many {# уникальных приглашений} other {# уникальных приглашений}}",
+      "statistic": "Statistik",
       "join": "{emote_join} {tracked, plural, one {# вход} few {# входа} many {# входов} other {# входов}}",
       "left": "{emote_left} {left, plural, one {# выход} few {# выхода} many {# выходов} other {# выходов}}",
       "leave": "{emote_leave} {fake, plural, one {# фейк} few {# фейка} many {# фейков} other {# фейков}}"
     },
     "ping": {
       "help": {
-        "description": "Узнать текущую задержку бота."
+        "description": "Zeigt die Aktuelle Verzögerung des Bots an."
       },
-      "calculating": "{emote_loading} Вычисление...",
-      "cluster": "Кластер: **{instanceName}** ({id}/{total})",
-      "shards": "Сегменты: [ {shard_list} ]",
-      "latency": "— Задержка: {latency}ms",
-      "command_reply": "— Обработка команд: {latency}ms",
-      "database": "— База данных: {latency}ms"
+      "calculating": "{emote_loading} Berechnung...",
+      "cluster": "Cluster: **{instanceName}** ({id}/{total})",
+      "shards": "Segmente: [ {shard_list} ]",
+      "latency": "— Verzögerung: {latency}ms",
+      "command_reply": "— Befehlsverarbeitung: {latency}ms",
+      "database": "— Datenbank: {latency}ms"
     },
     "remaining": {
       "help": {
-        "description": "Узнать, сколько осталось до следующего апа/бампа."
+        "description": "Finden Sie heraus, wie viel bis zum nächsten UP/BUMP noch übrig ist."
       },
-      "module_disabled": "на этом сервере не активирован модуль напоминаний.",
+      "module_disabled": "Das Erinnerungsmodul ist auf diesem Server nicht aktiviert.",
       "title": "Напоминания",
-      "process": "{emote_loading} Получение информации...",
-      "no_data": "Нет данных.",
-      "its_time": "Пора бампать!",
-      "not_found": "{emote_error} Не удалось получить данные ни об одном боте или напоминании."
+      "process": "{emote_loading} Einholung von Informationen...",
+      "no_data": "Keine Daten.",
+      "its_time": "Es ist Zeit zum BUMP!",
+      "not_found": "{emote_error} Es konnten keine Bot- oder Erinnerungsdaten abgerufen werden."
     },
     "server-info": {
       "help": {
-        "description": "Информация о сервере."
+        "description": "Information vom Server."
       },
       "verification_levels": {
-        "0": "Отсутствует",
-        "1": "Низкий",
-        "2": "Средний",
-        "3": "Высокий",
-        "4": "Самый высокий"
+        "0": "Nicht vorhanden",
+        "1": "Niedrig",
+        "2": "Mittel",
+        "3": "Hoch",
+        "4": "Höchst"
       },
       "channels": {
-        "text": "{emote_text} Текстовые каналы: {count}",
-        "voice": "{emote_voice} Голосовые каналы: {count}",
-        "stage": "{emote_stage} Трибуны: {count}",
-        "announce": "{emote_announce} Новостные каналы: {count}",
-        "category": "{emote_category} Категории: {count}"
+        "text": "{emote_text} Text-Channels: {count}",
+        "voice": "{emote_voice} Voice-Channels: {count}",
+        "stage": "{emote_stage} Tribüne: {count}",
+        "announce": "{emote_announce} Nachrichtensender: {count}",
+        "category": "{emote_category} Kategorien: {count}"
       },
-      "owner": "{emote_owner} Создатель: {user}",
-      "verification_level": "{emote_verified} Уровень проверки: {level}",
-      "created": "{emote_paint} Создан: {createdAt}",
-      "total_channels": "{emote_text} Всего {count, plural, one {# канал} few {# канала} many {# каналов} other {# каналов}}",
-      "boost": "Бусты",
-      "boost_level": "{emote_boost} Уровень: **{level}** (бустов — {count})",
+      "owner": "{emote_owner} Entwickler: {user}",
+      "verification_level": "{emote_verified} Validierungsstufe: {level}",
+      "created": "{emote_paint} Erstellt: {createdAt}",
+      "total_channels": "{emote_text} Nur {count, plural, one {# канал} few {# канала} many {# каналов} other {# каналов}}",
+      "boost": "Boosts",
+      "boost_level": "{emote_boost} Levels: **{level}** (бустов — {count})",
       "main": "Основное",
       "users": {
-        "title": "Пользователи",
-        "total": "{emote_member} Всего {count, plural, one {# пользователь} few {# пользователя} many {# пользователей} other {# пользователей}}",
-        "bots": "Ботов: {count}",
-        "members": "Участников: {count}"
+        "title": "Mitglieder",
+        "total": "{emote_member} Nur {count, plural, one {# пользователь} few {# пользователя} many {# пользователей} other {# пользователей}}",
+        "bots": "Bots: {count}",
+        "members": "Mitglieder: {count}"
       },
       "bonus": {
-        "title": "{emote_boost} Бонусы",
-        "description": "На сервере активирован пакет **AkemiPRO**.\nСпасибо за поддержку ❤️"
+        "title": "{emote_boost} Bonus",
+        "description": "Paket Namens **AkemiPRO** ist aktiviert.\nVielen Dank für Ihre Unterstützung ❤️"
       }
     },
     "up": {
       "help": {
-        "description": "Оценить сервер на BotiCord."
+        "description": "Server auf BotiCord bewerten."
       },
-      "title": "Сервер на Boticord",
-      "failed_to_request": "Что-то пошло не так! Попробуйте еще раз чуть позже."
+      "title": "Server auf Boticord",
+      "failed_to_request": "Etwas ist schief gelaufen! Versuchen Sie es etwas später noch einmal."
     },
     "user-info": {
       "help": {
-        "description": "Посмотреть информацию об участнике.",
+        "description": "Informationen über den Teilnehmer anschauen.",
         "examples": [
           {
-            "description": "Отобразит информацию об участнике, который вызвал команду."
+            "description": "Zeigt Informationen über den Teilnehmer an, der den Befehl aufgerufen hat.."
           },
           {
-            "description": "Отобразит информацию об участнике Monix#6666."
+            "description": "Informationen über den Teilnehmer Monix#6666."
           }
         ]
       },
-      "no_roles": "Нет ролей.",
-      "member_not_found": "участник не найден.",
-      "public": "Публичный: {boolean}",
-      "app_tags": "Теги: {tags}",
-      "intents": "Привилегированные намерения:",
-      "member_voice": "{emote_voice} Находится в голосовом канале: {channel}",
-      "timeout_end": "{emote_timeout} Конец наказания: {end}",
-      "server_avatar": "{emote_slash} Встраивание также отображает основной аватар участника, поскольку изменены параметры профиля сервера",
-      "invited": "Пригласили",
-      "joined": "Присоединился",
-      "created": "Аккаунт создан",
-      "more_info": "Дополнительная информация",
-      "roles": "Роли",
-      "avatar": "Серверный аватар"
+      "no_roles": "Keine Rollen.",
+      "member_not_found": "Mitglied nicht gefunden.",
+      "public": "Öffentlich: {boolean}",
+      "app_tags": "Tags: {tags}",
+      "intents": "Privilegierte Absichten:",
+      "member_voice": "{emote_voice} Befindet sich im Sprachkanal: {channel}",
+      "timeout_end": "{emote_timeout} Ende der Strafe: {end}",
+      "server_avatar": "{emote_slash} Die Einbettung zeigt auch den primären Avatar des Mitglieds an, da sich die Serverprofileinstellungen geändert haben",
+      "invited": "Eingeladen",
+      "joined": "Angegliedert",
+      "created": "Konto erstellt",
+      "more_info": "Weitere Information",
+      "roles": "Rollen",
+      "avatar": "Server-Avatar"
     },
     "ban": {
       "help": {
-        "description": "Заблокировать участника",
+        "description": "Benutzer blockieren",
         "examples": [
           {
-            "description": "Заблокировать 2 участников по причине: Реклама."
+            "description": "2 Teilnehmer Sperren. Grund: Werbung."
           },
           {
-            "description": "Заблокировать участника с Id 665661412068294676 по причине: Оскорбления."
+            "description": "Teilnehmer mit der Id 665661412068294676 Sperren. Grund: Beleidigung."
           }
         ]
       },
-      "process": "{emote_loading} Блокирую...",
-      "targets_not_found": "укажите участников, которых вы хотите заблокировать.",
-      "type": "Блокировка",
+      "process": "{emote_loading} Sperre...",
+      "targets_not_found": "Geben Sie die Mitglieder an, die Sie blockieren möchten.",
+      "type": "Sperrung",
       "targets": "{count, plural, =1 {Заблокированный участник} other {Заблокированные участники}}",
-      "failed_to_ban": "Не удалось заблокировать указанных участников."
+      "failed_to_ban": "Bestimmte Teilnehmer konnten nicht blockiert werden."
     },
     "kick": {
       "help": {
-        "description": "Выгнать участника.",
+        "description": "Teilnehmer kicken.",
         "examples": [
           {
-            "description": "Выгнать участников Monix#6666 дори#6666."
+            "description": "Folgende Teilnehmen kicken Monix#6666 дори#6666."
           },
           {
-            "description": "Выгнать участника с Id 665661412068294676."
+            "description": "Teilnehmer mit der Id 665661412068294676 kicken."
           }
         ]
       },
-      "process": "{emote_loading} Выгоняю...",
-      "targets_not_found": "укажите участников, которых вы хотите выгнать.",
+      "process": "{emote_loading} Kicke...",
+      "targets_not_found": "Geben Sie die Teilnehmer an, die Sie rausschmeißen möchten.",
       "type": "Кик",
       "targets": "{count, plural, =1 {Выгнанный участник} other {Выгнанные участники}}",
-      "failed_to_kick": "Не удалось выгнать указанных участников."
+      "failed_to_kick": "Fehler beim Rauswerfen der angegebenen Teilnehmer."
     },
     "mute": {
       "help": {
-        "description": "Временно наказать участника.",
+        "description": "Ein Mitglied vorübergehend bestrafen.",
         "examples": [
           {
-            "description": "Наказать участника Monix#6666 на 10 часов по причине: Спам."
+            "description": "Bestrafe Monix#6666 für 10 Stunden aus dem Grund: Spam."
           },
           {
-            "description": "Наказать участников Monix#6666 дори#6666 на 10 часов по причине: Спам."
+            "description": "Bestrafe Monix#6666 дори#6666 für 10 Stunden für: Spam."
           }
         ]
       },
-      "process": "{emote_loading} Наказываю...",
-      "targets_not_found": "укажите участников, которых вы хотите наказать.",
-      "invalid_timeout": "указано некорректное время наказания.",
-      "type": "Наказание",
-      "updated": "Обновлено",
+      "process": "{emote_loading} Bestrafe...",
+      "targets_not_found": "Geben Sie die Teilnehmer an, die Sie bestrafen möchten.",
+      "invalid_timeout": "falsche Strafzeit angegeben.",
+      "type": "Strafe",
+      "updated": "Aktualisiert",
       "targets": "{count, plural, =1 {Наказанный участник} other {Наказанные участники}}",
-      "failed_to_mute": "Не удалось наказать указанных участников."
-    },
-    "strikes": {
-      "help": {
-        "description": "Просмотреть список активных предупреждений.",
-        "full_description": "Показывает список всех активных предупреждений участников сервера, отсортированных по метке времени.",
-        "examples": [
-          {
-            "description": ""
-          }
-        ]
-      },
-      "no_warns": "на сервере нет активных предупреждений.",
-      "process": "{emote_loading} Получаю список предупреждений...",
-      "warns_list": {
-        "server": "Список предупреждений сервера {guildName}",
-        "user": "Список предупреждений участника {user}"
-      }
+      "failed_to_mute": "Bestimmte Teilnehmer konnten nicht bestraft werden."
     },
     "play": {
       "help": {
-        "description": "Воспроизвести песню через бота.",
+        "description": "Spielen Sie einen Song über diesen Bot ab.",
         "examples": [
           {
-            "description": "Воспроизведет указанный трек."
+            "description": "Wiedergeben des angegebenen Titels."
           }
         ]
       },
-      "query_required": "укажите название трека или url.",
-      "voice_required": "Вы должны находиться в голосовом канале, чтобы использовать эту команду.",
-      "voice_join": "пожалуйста, присоединяйтесь к голосовому каналу {channel}.",
-      "node_is_unavailable": "в настоящее время музыкальный сервер недоступен, обратитесь на сервер поддержки.",
-      "not_allowed_link": "этой ссылки нет в списке разрешенных, укажите другую ссылку.",
-      "searching_tracks": "{emote_loading} Поиск треков...",
-      "search_is_unavailable": "{emote_warn} Этот тип поиска в настоящее время недоступен...\n\n{emote_loading} Поиск похожих треков по вашему запросу...",
-      "search_yandex": "Режим поиска — {emote_yandex} Yandex Music\n\n{emote_warn} Загрузка музыкальных треков в очередь может занять некоторое время...",
-      "search_soundcloud": "Режим поиска {emote_soundcloud} SoundCloud",
-      "track_added": "{emote_platform} Трек {track} добавлен в очередь.",
-      "playlist_added": "{emote_platform} Плейлист {playlist} добавлен в очередь.",
-      "search_result": "{emote_platform} Найдено {tracks, plural, one {# трек} few {# трека} many {# треков} other {# треков}} по вашему запросу.",
-      "successfully_added": "Трек под номером {n} успешно добавлен в очередь сервера.",
-      "no_matches": "{emote_error} {user}, не удалось найти треки по вашему запросу.",
-      "load_failed": "{emote_error} {user}, не удалось загрузить выбранные треки."
+      "query_required": "Geben Sie den Namen des Songs an oder ein url.",
+      "voice_required": "Sie müssen sich im Sprachkanal befinden, um diesen Befehl verwenden zu können.",
+      "voice_join": "Bitte treten Sie dem Sprachkanal bei {channel}.",
+      "node_is_unavailable": "Der Musikserver ist derzeit nicht verfügbar, wenden Sie sich an den Supportserver.",
+      "not_allowed_link": "Dieser Link befindet sich nicht in der Liste der zulässigen Links, bitte geben Sie einen anderen Link an.",
+      "searching_tracks": "{emote_loading} Suche Songs...",
+      "search_is_unavailable": "{emote_warn} Diese Art der Suche ist derzeit nicht verfügbar...\n\n{emote_loading} Suche nach ähnlichen Tracks entsprechend Ihrer Suchanfrage...",
+      "search_yandex": "Suchmodus — {emote_yandex} Yandex Music\n\n{emote_warn} Es kann einige Zeit dauern, bis Musiktitel in die Warteschlange gestellt werden...",
+      "search_soundcloud": "Suchmodus {emote_soundcloud} SoundCloud",
+      "track_added": "{emote_platform} Song {track} Zur Warteschlange hinzugefügt.",
+      "playlist_added": "{emote_platform} Playlist {playlist} Zur Warteschlange hinzugefügt.",
+      "search_result": "{emote_platform} Gefunden {tracks, plural, one {# трек} few {# трека} many {# треков} other {# треков}} auf Ihren Wunsch.",
+      "successfully_added": "Song mit der Nummer {n} erfolgreich zur Serverwarteschlange hinzugefügt.",
+      "no_matches": "{emote_error} {user}, Tracks für Ihre Anfrage konnten nicht gefunden werden.",
+      "load_failed": "{emote_error} {user}, Ausgewählte Tracks konnten nicht geladen werden."
     },
     "queue": {
       "help": {
-        "description": "Посмотреть текущую очередь сервера.",
+        "description": "Anzeigen der aktuellen Serverwarteschlange.",
         "examples": [
           {
-            "description": "Отобразит 1 страницу очереди треков."
+            "description": "Zeigt 1 Seite der Track-Warteschlange an."
           },
           {
-            "description": "Отобразит 3 страницу очереди треков."
+            "description": "Zeigt Seite 3 der Trackwarteschlange an."
           }
         ]
       },
-      "player_is_idle": "в настоящее время ничего не воспроизводится.",
-      "queue_is_empty": "Очередь пуста.",
-      "current_playback": "Сейчас играет",
-      "total_queue_length": "Продолжительность музыкальной очереди",
-      "total_queue_tracks": "Всего музыкальных произведений",
-      "player_volume": "Громкость плеера",
-      "page": "Страница {currentPage}/{totalPages}",
-      "invalid_number": "номер страницы состоит исключительно из цифр.",
-      "pages_available": "доступно лишь {totalPages, plural, one {# страница} few {# страницы} many {# страниц} other {# страниц}}."
+      "player_is_idle": "Derzeit wird nichts gespielt.",
+      "queue_is_empty": "Warteschlange ist leer.",
+      "current_playback": "Wird derzeit gespielt",
+      "total_queue_length": "Dauer der musikalischen Warteschlange",
+      "total_queue_tracks": "Musikalische Gesamtwerke",
+      "player_volume": "Player-Lautstärke",
+      "page": "Seite {currentPage}/{totalPages}",
+      "invalid_number": "Die Seitenzahl besteht ausschließlich aus Zahlen.",
+      "pages_available": "nur verfügbar {totalPages, plural, one {# страница} few {# страницы} many {# страниц} other {# страниц}}."
     },
     "seek": {
       "help": {
-        "description": "Перемотать трек.",
+        "description": "Song vorspulen.",
         "examples": [
           {
-            "description": "Перемотать текущий трек в позиции 2:00"
+            "description": "Spulen Sie die aktuelle Strecke um 2:00 zurück"
           }
         ]
       },
-      "track_is_stream": "невозможно изменить положение воспроизводимого трека, поскольку это прямая трансляция.",
-      "no_args": "введите время в формате `00:20` или просто `0`.",
-      "invalid_format": "неверный формат времени.",
-      "more_time": "время не может быть больше длительности трека."
+      "track_is_stream": "Es ist nicht möglich, die Position des gespielten Titels zu ändern, da es sich um eine Live-Übertragung handelt.",
+      "no_args": "Geben Sie die Uhrzeit im Format `00:20` ein, oder einfach `0`.",
+      "invalid_format": "Ungültiges Zeitformat.",
+      "more_time": "die Zeit darf nicht länger sein als die Dauer des Songs."
     },
     "reminder": {
-      "reminder": "Напоминание",
-      "empty_list": "у вас нет напоминаний.",
+      "reminder": "Erinnerung",
+      "empty_list": "du hast keine Erinnerungen.",
       "list": {
-        "title": "Напоминания {user}",
-        "description": "Управляйте напоминаниями с помощью выпадающего списка.",
-        "length": "Всего {remindersLength, plural, one {# напоминание} few {# напоминания} many {# напоминаний} other {# напоминаний}}"
+        "title": "Erinnerung {user}",
+        "description": "Verwalten von Erinnerungen mit einer Dropdown-Liste.",
+        "length": "Insgesamt {remindersLength, plural, one {# напоминание} few {# напоминания} many {# напоминаний} other {# напоминаний}}"
       },
-      "expires": "Истекает {expires}",
+      "expires": "Abläuft {expires}",
       "send": {
-        "dm": "{emote_dm} Будет доставлено в личные сообщения.",
-        "channel": "{emote_chat} Будет доставлено в канал {channel}."
+        "dm": "{emote_dm} Wird in privaten Nachrichten zugestellt.",
+        "channel": "{emote_chat} Wird an den Kanal geliefert {channel}."
       },
-      "reminders_not_found": "Напоминаний не обнаружено. Возможно, они уже были доставлены.",
-      "failed_to_delete": "Не удалось удалить напоминания. Возможно, они уже были доставлены.",
-      "successfully_deleted": "Я удалила {deletedLength, plural, one {# напоминание} few {# напоминания} many {# напоминаний} other {# напоминаний}}.",
-      "successfully_created_reminder_dm": "{emote_alarm} Хорошо, я отправлю вам сообщение по этому поводу {time}.",
-      "successfully_created_reminder_channel": "{emote_alarm} Хорошо, я упомяну вас здесь по этому поводу {time}.",
-      "cancelled_operation": "{emote_error} Операция отменена.",
-      "reached_limit": "вы достигли лимита для создания новых напоминаний.",
-      "invalid_time": "время не определено.",
-      "invalid_time_0s": "время напоминания не может быть меньше 0.",
-      "invalid_time_1y": "время напоминания не должно превышать 1 года.",
-      "select_method_send": "Выберите способ доставки напоминания.",
-      "time": "Время напоминания",
-      "content": "Содержание",
-      "sent_from": "Отправлено с {guildName}",
+      "reminders_not_found": "Es wurden keine Erinnerungen festgestellt. Möglicherweise wurden sie bereits geliefert..",
+      "failed_to_delete": "Erinnerungen konnten nicht gelöscht werden. Möglicherweise wurden sie bereits geliefert..",
+      "successfully_deleted": "Ich habe gelöscht {deletedLength, plural, one {# напоминание} few {# напоминания} many {# напоминаний} other {# напоминаний}}.",
+      "successfully_created_reminder_dm": "{emote_alarm} Okay, ich schicke Ihnen eine Nachricht dazu {time}.",
+      "successfully_created_reminder_channel": "{emote_alarm} Okay, ich werde Sie hier dazu erwähnen. {time}.",
+      "cancelled_operation": "{emote_error} Vorgang abgebrochen.",
+      "reached_limit": "Sie haben das Limit für das Erstellen neuer Erinnerungen erreicht.",
+      "invalid_time": "Zeit nicht definiert.",
+      "invalid_time_0s": "Die Erinnerungszeit kann nicht kürzer sein als0 0.",
+      "invalid_time_1y": "Die Erinnerungszeit sollte 1 Jahr nicht überschreiten.",
+      "select_method_send": "Wählen Sie aus, wie Sie Ihre Erinnerung zustellen möchten.",
+      "time": "Erinnerungszeit",
+      "content": "Inhalt",
+      "sent_from": "Gesendet von {guildName}",
       "monitoring": {
-        "button_label": "Команда: {commandName} | Сервисный бот — {botName}"
+        "button_label": "Befehl: {commandName} | Сервисный бот — {botName}"
       },
       "methods": {
-        "dm": "Личные сообщения",
-        "channel": "Прямо здесь",
-        "cancel": "Я передумал (-а)"
+        "dm": "Private Nachrichten",
+        "channel": "Genau hier",
+        "cancel": "Ich habe meine Meinung geändert"
       },
       "description": {
-        "dm": "Отправить напоминание в личные сообщения",
-        "channel": "Отправить напоминание в текущий канал",
-        "cancel": "Отменить и не отправлять напоминание"
+        "dm": "Senden einer Erinnerung an private Nachrichten",
+        "channel": "Senden Sie eine Erinnerung an Ihren aktuellen Kanal",
+        "cancel": "Abbrechen und keine Erinnerung senden"
       }
     }
   },
   "events": {
     "interaction_create": {
-      "received": "Это взаимодействие было вызвано другим участником.",
-      "expired": "Это взаимодействие больше недоступно, поскольку срок его действия истек. При необходимости вызовите эту команду снова.",
+      "received": "Diese Interaktion wurde von einem anderen Teilnehmer verursacht.",
+      "expired": "Diese Interaktion ist nicht mehr verfügbar, da sie abgelaufen ist. Rufen Sie diesen Befehl bei Bedarf erneut auf.",
       "failed": {
-        "title": "Ошибка взаимодействия",
-        "message": "Это взаимодействие вернуло ошибку, операция не может быть продолжена. Если проблема сохраняется, обратитесь на сервер поддержки."
-      }
-    },
-    "guild_create": {
-      "embed": {
-        "title": "Спасибо за приглашение!",
-        "line_1": "На данный момент меня можно настроить с помощью команд, но очень скоро появится удобная панель управления для настройки вашего прекрасного сервера.",
-        "line_2": "Чтобы узнать о доступных командах, используйте `a.help` или посетите наш сайт."
+        "title": "Interoperabilitätsfehler",
+        "message": "Diese Interaktion hat einen Fehler zurückgegeben, der Vorgang konnte nicht fortgesetzt werden. Wenn das Problem weiterhin besteht, wenden Sie sich an den Supportserver."
       }
     },
     "message_delete": {
-      "deleted": "Сообщение удалено",
-      "executor": "Удаливший"
+      "deleted": "Nachricht gelöscht",
+      "executor": "Deleter"
     },
     "message_update": {
-      "updated": "Сообщение обновлено",
-      "before": "До",
-      "after": "После",
-      "empty_message": "Пустое сообщение"
+      "updated": "Nachricht aktualisiert",
+      "before": "Vorher",
+      "after": "Nachher",
+      "empty_message": "Leere Nachricht"
     }
   },
   "components": {
-    "common": {
-      "back": "Назад",
-      "change": "Изменить",
-      "reset": "Сбросить",
-      "enable": "Включить",
-      "disable": "Выключить"
-    },
     "configuration": {
-      "placeholder": "Выбрать опцию",
+      "placeholder": "Wählen Sie eine Option aus",
       "options": {
-        "general": "Основные",
-        "automod": "Автоматическая модерация",
-        "logs": "Журнал действий"
-      }
-    },
-    "reset": {
-      "labels": {
-        "levels_and_messages": "Уровни и сообщения",
-        "currency": "Валюта",
-        "economy_cooldowns": "Временные ограничения в экономике",
-        "voice_activity": "Голосовая активность",
-        "prison": "Тюрьма"
-      },
-      "single_labels": {
-        "levels": "Уровни",
-        "messages": "Сообщения",
-        "currency": {
-          "cash": "Наличные",
-          "bank": "Банк"
-        },
-        "arrest": "Арест"
-      },
-      "actions": {
-        "confirm": "Подтвердить",
-        "cancel": "Отмена"
+        "general": "Hauptsächlich",
+        "automod": "Automatische Moderation",
+        "logs": "Aktivitätsprotokoll"
       }
     },
     "say": {
-      "embed_builder": "Конструктор встраивания"
-    },
-    "settings": {
-      "placeholder": "Выбрать модуль",
-      "options": {
-        "auto-role": {
-          "label": "Автоматические роли",
-          "description": "Выдача ролей при входе на сервер."
-        },
-        "automod": {
-          "label": "Автоматическая модерация",
-          "description": "Настройка фильтров автоматической модерации."
-        },
-        "casino": {
-          "label": "Казино",
-          "description": "Изменение внутренних ограничений."
-        },
-        "color": {
-          "label": "Цвет встраивания",
-          "description": "Управление цветом встраивания Akemi."
-        },
-        "currency": {
-          "label": "Серверная валюта",
-          "description": "Изменение значка валюты."
-        },
-        "music": {
-          "label": "Музыка",
-          "description": "Настройка музыкального сервиса."
-        },
-        "goodbye": {
-          "label": "Прощание"
-        },
-        "language": {
-          "label": "Язык"
-        },
-        "logs": {
-          "label": "Журнал действий"
-        },
-        "notification": {
-          "label": "Оповещения"
-        },
-        "prefix": {
-          "label": "Префикс"
-        },
-        "private": {
-          "label": "Приватные комнаты",
-          "description": "Настройка приватных голосовых комнат."
-        },
-        "saver": {
-          "label": "Восстановление ролей и псевдонимов"
-        },
-        "welcome": {
-          "label": "Приветствие"
-        }
-      },
-      "auto-role": {
-        "placeholder": "Роли не выбраны ({page} страница)",
-        "clear_all_roles": "Очистить все роли"
-      },
-      "automod": {
-        "placeholder": "Выбрать фильтр",
-        "options": {
-          "duplicate": "Дублирование сообщений",
-          "zalgo": "Символы зальго",
-          "emoji": "Эмодзи",
-          "newlines": "Строки",
-          "mentions": "Упоминания",
-          "advertisement": "Рекламирование Discord серверов",
-          "raid_mode": "Модерирование новоприбывших",
-          "ref": "Ссылки перенаправления, Скам & Фишинг"
-        },
-        "edit_filter": "Изменить параметры фильтра",
-        "modal": {
-          "title": "Изменение параметров фильтра",
-          "strike_count": "Количество выдаваемых предупреждений",
-          "default_placeholder": "{count} — по умолчанию",
-          "dupe_delete": "Начинать удаление дубликатов с",
-          "dupe_strike_trash": "Выдавать страйки после достижения дубликатов",
-          "emoji_per_message": "Количество эмодзи в сообщении",
-          "lines_per_message": "Количество строк в сообщении",
-          "max_mentions": "Максимальное количество упоминаний",
-          "time": "Время (в секундах)",
-          "rate_limit_join": "Ограничение скорости присоединения",
-          "rate_placeholder": "{count, plural, one {# присоединение} few {# присоединения} many {# присоединений} other {# присоединений}} — по умолчанию"
-        }
-      },
-      "casino": {
-        "placeholder": "Текущий лимит ставки: {slotsLimit}"
-      },
-      "color": {
-        "placeholder": "Текущий цвет: {hex}"
-      },
-      "currency": {
-        "placeholder": "Текущая валюта сервера",
-        "error": "Ошибка"
-      },
-      "goodbye": {},
-      "language": {
-        "list": {
-          "ar": "Арабский (Саудовская Аравия)",
-          "de": "Немецкий (Германия)",
-          "us": "Английский (США)",
-          "fr": "Французский (Франция)",
-          "kz": "Казахский (Казахстан)",
-          "lv": "Латышский (Латвия)",
-          "ru": "Русский (Россия)",
-          "ru-crazy": "Русский (Юмор версия)",
-          "uk": "Украинский (Украина)"
-        },
-        "click": "Нажмите, чтобы изменить язык",
-        "placeholder": "Выбрать язык"
-      },
-      "logs": {
-        "placeholder": "Выбрать тип действия",
-        "options": {
-          "user": {
-            "label": "Участники",
-            "description": "Регистрирует все действия участников."
-          },
-          "message": {
-            "label": "Сообщения",
-            "description": "Регистрирует изменения в сообщениях на сервере."
-          },
-          "mod": {
-            "label": "Модерирование",
-            "description": "Регистрирует действия модерации."
-          },
-          "voice": {
-            "label": "Голосовая активность",
-            "description": "Регистрирует действия из голосовых каналов."
-          },
-          "invite": {
-            "label": "Приглашения [AkemiPRO]",
-            "description": "Регистрирует переходы по приглашениям."
-          },
-          "confession": {
-            "label": "Признания [AkemiPRO]",
-            "description": "Регистрирует репорты об участниках анонимных сообщений."
-          },
-          "ticket": {
-            "label": "Обращения [AkemiPRO]",
-            "description": "Регистрирует данные об обращениях."
-          }
-        }
-      },
-      "music": {
-        "max_queue_size": "Макс. длина очереди",
-        "dj_roles": "Роли DJ",
-        "modal": {
-          "title": "Изменение максимальной длины очереди",
-          "max_queue_size": "Максимальная длина очереди"
-        }
-      },
-      "notification": {},
-      "prefix": {
-        "placeholder": "Текущий префикс: {prefix}",
-        "modal": {
-          "title": "Изменение префикса",
-          "new_prefix": "Новый префикс"
-        }
-      },
-      "private": {
-        "change_limit": "Изменить лимит",
-        "change_style": "Изменить стиль",
-        "modal": {
-          "title": "Изменение лимита канала",
-          "limit": "Лимит канала (от 0 до 99)"
-        }
-      },
-      "saver": {
-        "roles": "Роли",
-        "nicknames": "Псевдонимы",
-        "strict_roles": "Строгие роли"
-      },
-      "welcome": {}
+      "embed_builder": "Einbettungs-Builder"
     },
     "skynet": {
-      "add": "Дополнить",
-      "regenerate": "Повторная генерация",
-      "stop_generate": "Остановить генерацию"
+      "add": "Ergänzung",
+      "regenerate": "Regenerierung",
+      "stop_generate": "Stoppen Sie die Generierung"
     },
     "help": {
-      "select_category": "Выберите категорию"
+      "select_category": "Wählen Sie eine Kategorie aus"
     },
     "invite": {
-      "invite_bot": "Пригласить бота",
-      "site": "Сайт",
-      "support_server": "Сервер поддержки"
+      "invite_bot": "Unseren Bot einladen",
+      "site": "Webseite",
+      "support_server": "Support-Server"
     },
     "user-info": {
-      "terms_of_service": "Условия пользования",
-      "privacy_policy": "Политика конфиденциальности",
-      "add_bot": "Добавить бота"
+      "terms_of_service": "Nutzungsbedingungen (AGB)",
+      "privacy_policy": "Datenschutzrichtlinie",
+      "add_bot": "Bot hinzufügen"
     },
     "music": {
       "track": {
-        "no_author": "Информация об авторе недоступна",
-        "no_description": "Описание трека отсутствует",
-        "select_track": "Выбрать трек",
-        "cancel": "Я передумал"
+        "no_author": "Informationen über den Autor sind nicht verfügbar",
+        "no_description": "Songbeschreibung fehlt",
+        "select_track": "Song auswählen",
+        "cancel": "Ich habe meine Meinung geändert"
       },
       "bass": {
-        "placeholder": "Изменить уровень басcа",
-        "description": "Нажмите, чтобы применить этот эффект",
-        "reset": "Сбросить",
-        "low": "Низкий",
-        "medium": "Средний",
-        "high": "Высокий"
+        "placeholder": "Basspegel ändern",
+        "description": "Klicken Sie hier, um diesen Effekt anzuwenden",
+        "reset": "Zurücksetzen",
+        "low": "Niedrig",
+        "medium": "Durchschnitt",
+        "high": "Hoch"
       },
       "previous": {
-        "tracks_not_found": "Предыдущие треки не найдены",
-        "back_tracks": "Возврат к предыдущим трекам"
+        "tracks_not_found": "Vorherige Tracks nicht gefunden",
+        "back_tracks": "Zurück zu den vorherigen Titeln"
       }
     },
     "reminder": {
-      "placeholder": "Выберите напоминание",
-      "placeholder_method": "Выбрать способ отправки напоминания",
+      "placeholder": "Wählen Sie eine Erinnerung",
+      "placeholder_method": "Auswählen, wie eine Erinnerung gesendet werden soll",
       "options": {
-        "label": "Напоминание #{n}",
-        "description": "Содержание: {content}"
+        "label": "Erinnerung #{n}",
+        "description": "Inhalt: {content}"
       },
       "actions": {
-        "cancel": "Отменить действие",
-        "info": "Информация",
-        "delete": "Удалить"
+        "cancel": "Aktion rückgängig machen",
+        "info": "Information",
+        "delete": "Löschen"
       }
     },
     "message_update": {
-      "jump_to_message": "Перейти к сообщению"
+      "jump_to_message": "Zur Nachricht"
     }
   },
   "services": {
     "automod": {
-      "spamming": "пожалуйста, не спамьте.",
-      "zalgo": "на этом сервере запрещено отправлять зальго символы.",
-      "advertising": "на этом сервере запрещено отправлять Discord приглашения.",
-      "phishing": "на этом сервере запрещено отправлять фишинг-ссылки.",
-      "referral": "на этом сервере запрещено отправлять ссылки-перенаправления.",
-      "image_filter": "Этот канал предназначен только для отправки изображений! Остальной контент автоматически удаляется.",
+      "spamming": "Bitte spammen Sie nicht.",
+      "zalgo": "Auf diesem Server ist es verboten, Zalogo-Zeichen zu senden.",
+      "advertising": "Sie können keine Discord-Einladungen auf diesem Server senden.",
+      "phishing": "Sie können keine Phishing-Links auf diesem Server senden.",
+      "referral": "Weiterleitungslinks sind auf diesem Server nicht zulässig.",
+      "image_filter": "Dieser Kanal dient nur zum Senden von Bildern! Der Rest des Inhalts wird automatisch gelöscht.",
       "reasons": {
-        "spamming": "Флуд одинаковыми сообщениями",
-        "zalgo": "Zalgo символы",
-        "emoji": "Спам эмодзи ({emojiPerMessage}/{emojiPerMessageAllowed})",
-        "mentions_roles": "Упоминание {count, plural, one {# роль} few {# роли} many {# ролей} other {# ролей}}",
-        "mentions_users": "Упоминание {count, plural, one {# участник} few {# участника} many {# участников} other {# участников}}",
-        "mentions_everyone": "Попытка еveryone/here упоминаний",
-        "advertising": "Попытка рекламы Discord сервера",
-        "maxlines": "Сообщение содержало {count} новых строк",
-        "phishing": "Скам & Фишинг ссылки",
-        "referral": "Ссылки перенаправления"
+        "spamming": "Mehrere gleiche Nachrichten",
+        "zalgo": "Zalgo symbole",
+        "emoji": "Spam-Emoji ({emojiPerMessage}/{emojiPerMessageAllowed})",
+        "mentions_roles": "Erwähnen {count, plural, one {# роль} few {# роли} many {# ролей} other {# ролей}}",
+        "mentions_users": "Erwähnen {count, plural, one {# участник} few {# участника} many {# участников} other {# участников}}",
+        "mentions_everyone": "Versuchte everyone/here Erwähnungen",
+        "advertising": "Versuch, einen Fremden Discord server reinzuschicken",
+        "maxlines": "Die enthaltene Nachricht hatte {count} neue Linien",
+        "phishing": "Betrugs- und Phishing-Links",
+        "referral": "Weiterleitungslinks"
       }
     },
     "music": {
       "common": {
-        "voice_required": "Пожалуйста, присоединяйтесь к голосовому каналу {channel}, чтобы взаимодействовать с плеером.",
-        "unknown_requester": "Неизвестный участник"
+        "voice_required": "Bitte treten Sie dem Sprachkanal bei {channel}, um mit dem Musik zu interagieren.",
+        "unknown_requester": "Unbekannter Teilnehmer"
       },
       "errors": {
         "aborted": {
-          "title": "Воспроизведение трека прервано",
-          "description": "Соединение было прервано из-за того, что я была отключена от голосового канала или произошла ошибка во время воспроизведения трека."
+          "title": "Track-Wiedergabe abgebrochen",
+          "description": "Die Verbindung wurde unterbrochen, weil ich vom Sprachkanal getrennt wurde oder ein Fehler während der Wiedergabe des Titels aufgetreten ist."
         },
         "load_failed": {
-          "title": "Ошибка загрузки трека",
-          "description": "Мне не удалось воспроизвести этот трек из-за неизвестной ошибки."
+          "title": "Fehler beim Laden der Musik",
+          "description": "Ich konnte diesen Track aufgrund eines unbekannten Fehlers nicht abspielen."
         },
         "long_waiting": {
-          "title": "Остановлено",
-          "description": "Я покинула канал из-за долгой паузы."
+          "title": "Angehalten",
+          "description": "Ich verließ den Kanal wegen einer langen Pause."
         },
         "force_stopped": {
-          "title": "Остановлено",
-          "description": "{user} принудительно остановил очередь сервера"
+          "title": "Angehalten",
+          "description": "{user} hat Die Serverwarteschlange gewaltsam gestoppt"
         },
         "no_tracks": {
-          "title": "Пустая очередь сервера",
-          "description": "Я покинула канал, потому что в очереди нет треков."
+          "title": "Leere Serverwarteschlange",
+          "description": "Ich habe den Kanal verlassen, weil es keine Spuren in der Warteschlange gibt."
         },
         "resume": {
-          "title": "Ошибка возобновления",
-          "description": "Я не смогла подключиться к голосовому каналу, очередь треков была очищена."
+          "title": "Fehler "Fortsetzen"",
+          "description": "Ich konnte keine Verbindung zum Sprachkanal herstellen, die Warteschlange der Tracks wurde gelöscht."
         }
       },
       "statuses": {
-        "ended": "Прослушано",
-        "skipped": "Пропущено",
-        "stopped": "Остановлено",
-        "error": "Ошибка"
+        "ended": "Angehört",
+        "skipped": "Geskippt",
+        "stopped": "Gestoppt",
+        "error": "Fehler"
       },
       "playlist_saved": {
-        "title": "Плейлист сохранен",
-        "description": "Вы можете использовать [ссылку]({url}), чтобы возобновить очередь треков при повторном запросе."
+        "title": "Playlist gespeichert",
+        "description": "Sie können verwenden [link]({url}), um die Nachverfolgungswarteschlange bei erneuter Anforderung fortzusetzen."
       },
       "bass": {
-        "success": "Успешно",
-        "message": "Уровень басса успешно установлен и будет применен к текущей очереди через несколько секунд.",
-        "impact": "Уровень воздействия"
+        "success": "Erfolgreich",
+        "message": "Der Basspegel wurde erfolgreich eingestellt und wird in wenigen Sekunden auf die aktuelle Warteschlange angewendet..",
+        "impact": "Höhe der Exposition"
       },
       "re_sync": {
-        "title": "Повторная синхронизация...",
-        "load_balancer": "Не волнуйтесь, мы все восстановим!\nПроцесс балансировки нагрузки может занять некоторое время.",
+        "title": "Neusynchronisierung...",
+        "load_balancer": "Keine Sorge, wir bauen alles wieder auf!\nDer Lastenausgleich kann einige Zeit in Anspruch nehmen.",
         "reconnecting": {
-          "description": "Что-то пошло не так. Попытка восстановить предыдущее соединение",
-          "success": "Соединение восстановлено",
-          "message_resume": "Сообщение будет возобновлено прямо сейчас."
+          "description": "Etwas ist schief gelaufen. Versuche, eine vorherige Verbindung wiederherzustellen",
+          "success": "Verbindung wiederhergestellt",
+          "message_resume": "Die Nachricht wird jetzt fortgesetzt."
         }
       },
       "restoration": {
-        "title": "Восстановление треков после неожиданной перезагрузки бота",
-        "description": "Не волнуйтесь, сейчас мы все восстановим! Этот процесс может занять некоторое время."
+        "title": "Nachverfolgen der Wiederherstellung nach einem unerwarteten Bot-Neustart",
+        "description": "Keine Sorge, wir stellen jetzt alles wieder her! Dieser Vorgang kann einige Zeit in Anspruch nehmen."
       },
-      "server_queue": "Очередь сервера {guildName}",
-      "session": "Сеанс {sessionId}",
-      "playlist": "Плейлист",
-      "status": "Статус",
-      "requester": "Запрос от: {requester}",
-      "stream": "Прямая трансляция",
-      "load": "Нагрузка: {cpu}%",
-      "playing_players": "Голосовые соединения: {players}",
-      "volume": "Громкость",
+      "server_queue": "Server-Warteschlange {guildName}",
+      "session": "Sitzung {sessionId}",
+      "playlist": "Playlist",
+      "status": "Status",
+      "requester": "Anfrage von: {requester}",
+      "stream": "Live-Stream",
+      "load": "Last: {cpu}%",
+      "playing_players": "Sprachverbindungen: {players}",
+      "volume": "Volumen",
       "repeat_mode": {
-        "common": "Режим повтора",
-        "track": "Текущий трек",
-        "queue": "Очередь"
+        "common": "Schlummermodus",
+        "track": "Aktueller Track",
+        "queue": "Schlange"
       },
-      "next_tracks": "Следующие треки",
-      "total_duration": "Общая продолжительность: {duration}",
-      "total_queue": "Всего треков в очереди: {length}",
+      "next_tracks": "Spätere Tracks",
+      "total_duration": "Gesamtdauer: {duration}",
+      "total_queue": "Gesamtzahl der Songs in der Linie: {length}",
       "maintenance": {
-        "title": "Загружаем обновление...",
-        "message": "В настоящее время бот находится в режиме обслуживания, загружая обновление. Соединение может быть прервано на несколько секунд."
+        "title": "Laden das Update herunter...",
+        "message": "Der Bot befindet sich derzeit im Wartungsmodus und lädt das Update herunter. Die Verbindung kann für einige Sekunden unterbrochen werden."
       }
     }
   }
